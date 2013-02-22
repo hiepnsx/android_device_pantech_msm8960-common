@@ -28,11 +28,11 @@ BOARD_VENDOR := pantech
 # Architecture
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-BOARD_USES_FLUENCE_INCALL := true
-BOARD_USES_SEPERATED_AUDIO_INPUT := true
 #TARGET_QCOM_AUDIO_VARIANT := caf
 
 # Bluetooth
@@ -40,9 +40,7 @@ TARGET_NEEDS_BLUETOOTH_INIT_DELAY := true
 
 # Board info
 BOARD_HAS_NO_MISC_PARTITION := true
-
-# Charging mode
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_USES_MMCUTILS := true
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
@@ -52,7 +50,7 @@ BOARD_USES_QCOM_GPS := true
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-TARGET_NO_RPC := true
+#TARGET_NO_RPC := true
 
 # Graphics
 #BOARD_HAVE_OLD_ION_API := true
@@ -60,12 +58,10 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 TARGET_NO_HW_VSYNC := true
 #TARGET_QCOM_DISPLAY_VARIANT := caf
 
-# Overlay
-TARGET_USES_OVERLAY := true
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+#TARGET_ARCH_VARIANT_CPU := cortex-a9
 
 # QCOM Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
@@ -75,18 +71,11 @@ TARGET_KRAIT_BIONIC_PLDTHRESH := 10
 TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
-HAVE_CYTTSP_FW_UPGRADE := true
-HAVE_MXT_FW_UPGRADE := true
-HAVE_MXT_CFG := true
-
-# Radio info
+# Target info
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
-
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USES_OVERLAY := true
 
 # Time - Add support for kernel user helpers and gettimeofday() in bionic
 #KERNEL_HAS_GETTIMEOFDAY_HELPER := true
-
-# Compile tiny android by default
-#BUILD_TINY_ANDROID := true
