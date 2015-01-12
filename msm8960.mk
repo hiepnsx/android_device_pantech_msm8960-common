@@ -25,6 +25,13 @@ DEVICE_PACKAGE_OVERLAYS := device/pantech/msm8960-common/overlay
 PRODUCT_COPY_FILES += \
     device/pantech/msm8960-common/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
 
+# Audio UCM files
+PRODUCT_COPY_FILES += \
+    device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm:system/etc/snd_soc_msm/snd_soc_msm \
+    device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
+
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
@@ -48,7 +55,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     alsa.msm8960 \
     audio.r_submix.default \
-    libaudio-resampler
+    libaudio-resampler \
+    snd_soc_msm \
+    snd_soc_msm_2x \
+    snd_soc_msm_2x_Fusion3 \
+    snd_soc_msm_Sitar
 
 # Battery
 PRODUCT_PACKAGES += \
