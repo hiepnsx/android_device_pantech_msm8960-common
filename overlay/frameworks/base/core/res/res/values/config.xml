@@ -31,14 +31,14 @@
     </string-array>
 
     <!-- Boolean indicating whether the wifi chipset has p2p support -->
-    <bool translatable="false" name="config_wifi_p2p_support">true</bool>
+    <!-- <bool translatable="false" name="config_wifi_p2p_support">true</bool> -->
 
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">rmnet_sdio0</string>
 
     <!-- Boolean indicating if current platform supports quick switch-on/off of
                   Bluetooth Module -->
-    <bool name="config_bluetooth_adapter_quick_switch">false</bool>
+    <!-- <bool name="config_bluetooth_adapter_quick_switch">false</bool> -->
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
                   bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
