@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
 
 # Bluetooth configuration files
-PRODUCT_COPY_FILES += system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+#PRODUCT_COPY_FILES += system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Media configuration
 PRODUCT_COPY_FILES += \
