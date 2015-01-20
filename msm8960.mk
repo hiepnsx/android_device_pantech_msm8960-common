@@ -78,6 +78,11 @@ PRODUCT_PACKAGES += \
     msm8960-snd-card_Button_Jack.kl \
     keypad_8960_qwerty.kcm
 
+#wlan driver
+PRODUCT_PACKAGES += \
+    wpa_supplicant_overlay.conf \
+    p2p_supplicant_overlay.conf
+
 #----------------------------------------------------------------------
 
 # We have enough storage space to hold precise GC data
