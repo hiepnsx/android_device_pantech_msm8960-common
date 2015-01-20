@@ -90,11 +90,6 @@ PRODUCT_PACKAGES += \
     msm8960-snd-card_Button_Jack.kl \
     keypad_8960_qwerty.kcm
 
-# Lpm
-PRODUCT_PACKAGES += \
-    lpm.rc \
-    init.qcom.lpm_boot.sh
-
 #----------------------------------------------------------------------
 
 # We have enough storage space to hold precise GC data
