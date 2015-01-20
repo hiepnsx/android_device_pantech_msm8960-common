@@ -33,7 +33,9 @@ PRODUCT_COPY_FILES += \
     device/pantech/msm8960-common/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # Permissions
-PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 # Thermal configuration
 PRODUCT_COPY_FILES += device/pantech/msm8960-common/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
