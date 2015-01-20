@@ -22,8 +22,7 @@ DEVICE_PACKAGE_OVERLAYS := device/pantech/msm8960-common/overlay
 #----------------------------------------------------------------------
 
 # Audio policy
-PRODUCT_COPY_FILES += \
-    device/pantech/msm8960-common/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += device/pantech/msm8960-common/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
 
 # Audio UCM files
 PRODUCT_COPY_FILES += \
@@ -33,8 +32,7 @@ PRODUCT_COPY_FILES += \
     device/pantech/msm8960-common/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
 
 # Bluetooth configuration files
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+PRODUCT_COPY_FILES += system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Media configuration
 PRODUCT_COPY_FILES += \
@@ -42,12 +40,10 @@ PRODUCT_COPY_FILES += \
     device/pantech/msm8960-common/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
+PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
 # Thermal configuration
-PRODUCT_COPY_FILES += \
-    device/pantech/msm8960-common/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
+PRODUCT_COPY_FILES += device/pantech/msm8960-common/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
 
 #----------------------------------------------------------------------
 
