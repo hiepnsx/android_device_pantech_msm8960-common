@@ -29,8 +29,8 @@ PRODUCT_COPY_FILES += device/pantech/msm8960-common/prebuilt/system/etc/audio_po
 
 # Media configuration
 PRODUCT_COPY_FILES += \
-    device/pantech/msm8960-common/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/pantech/msm8960-common/media/media_codecs.xml:system/etc/media_codecs.xml
+    device/pantech/msm8960-common/media/media_profiles_8960.xml:system/etc/media_profiles.xml \
+    device/pantech/msm8960-common/media/media_codecs_8960.xml:system/etc/media_codecs.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
