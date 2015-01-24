@@ -58,6 +58,19 @@ PRODUCT_PACKAGES += \
 # fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 
+# msm8960
+PRODUCT_PACKAGES += \
+    audio_policy.msm8960 \
+    audio.primary.msm8960 \
+    camera.msm8960 \
+    copybit.msm8960 \
+    gestures.msm8960 \
+    gps.msm8960 \
+    gralloc.msm8960 \
+    hwcomposer.msm8960 \
+    lights.msm8960 \
+    sensors.msm8960
+
 # Keylayouts and Keychars
 PRODUCT_PACKAGES += \
     AVRCP.kl \
@@ -70,9 +83,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lpm.rc \
     init.qcom.lpm_boot.sh
-
-# Sensors
-PRODUCT_PACKAGES += sensors.msm8960
 
 #----------------------------------------------------------------------
 
