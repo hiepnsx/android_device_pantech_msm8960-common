@@ -18,14 +18,15 @@
 
 BOARD_VENDOR := pantech
 
-# inherit from pantech msm8x60-common
--include device/pantech/msm8x60-common/BoardConfigCommon.mk
-
 #----------------------------------------------------------------------
 
 # Architecture
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_ARCH         := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI      := armeabi-v7a
+TARGET_CPU_ABI2     := armeabi
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_VARIANT := krait
@@ -37,15 +38,21 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_LEGACY_ALSA_AUDIO := true
 
 # Bluetooth
+BOARD_HAVE_BLUETOOTH := true
 TARGET_NEEDS_BLUETOOTH_INIT_DELAY := true
 
 # Board info
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USES_MMCUTILS := true
 
 # Flags
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 
 # GPS
@@ -56,8 +63,16 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 #TARGET_NO_RPC := true
 
 # Graphics
+BOARD_EGL_CFG := device/pantech/msm8960-common/prebuilt/system/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 TARGET_NO_HW_VSYNC := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_LIBS := true
 
 # Power/Charger
 BOARD_CHARGER_RES := device/pantech/msm8960-common/charger
@@ -69,6 +84,8 @@ TARGET_POWERHAL_VARIANT := cm
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
+TARGET_PROVIDES_LIBLIGHT    := true
+TARGET_USERIMAGES_USE_EXT4  := true
 TARGET_USES_OVERLAY := true
 
 # Time - Add support for kernel user helpers and gettimeofday() in bionic
@@ -76,3 +93,7 @@ TARGET_USES_OVERLAY := true
 
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
+# Webkit
+ENABLE_WEBGL := true
+TARGET_FORCE_CPU_UPLOAD := true
