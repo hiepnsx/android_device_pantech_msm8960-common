@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
     lights.msm8960 \
+    memtrack.msm8960 \
     sensors.msm8960
 
 # Keylayouts and Keychars
