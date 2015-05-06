@@ -59,6 +59,12 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 TARGET_NO_HW_VSYNC := true
 
+# Power/Charger
+BOARD_CHARGER_RES := device/pantech/msm8960-common/charger
+#BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+#BOARD_BATTERY_DEVICE_NAME := "battery"
+TARGET_POWERHAL_VARIANT := cm
+
 # Target info
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false

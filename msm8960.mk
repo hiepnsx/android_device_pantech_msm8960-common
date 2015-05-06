@@ -53,6 +53,11 @@ PRODUCT_PACKAGES += \
     battery_monitor \
     battery_shutdown
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
 # fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 
@@ -68,6 +73,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8960 \
     lights.msm8960 \
     memtrack.msm8960 \
+    power.msm8960 \
     sensors.msm8960
 
 # Keylayouts and Keychars
